@@ -25,6 +25,22 @@ func LoggHandler() gin.HandlerFunc {
 func main() {
 	repoConfigProvider := config.NewRepoConfigInMemory()
 	repoConfigProvider.AddRepoConfig(&config.RepoConfig{
+		RepoKey:   "gcr.io",
+		RemoteURL: "https://gcr.io",
+	})
+	repoConfigProvider.AddRepoConfig(&config.RepoConfig{
+		RepoKey:   "registry.access.redhat.com",
+		RemoteURL: "https://registry.access.redhat.com",
+	})
+	repoConfigProvider.AddRepoConfig(&config.RepoConfig{
+		RepoKey:   "mcr.microsoft.com",
+		RemoteURL: "https://mcr.microsoft.com",
+	})
+	repoConfigProvider.AddRepoConfig(&config.RepoConfig{
+		RepoKey:   "public.ecr.aws",
+		RemoteURL: "https://public.ecr.aws",
+	})
+	repoConfigProvider.AddRepoConfig(&config.RepoConfig{
 		RepoKey:   "docker.io",
 		RemoteURL: "https://registry-1.docker.io",
 	})
