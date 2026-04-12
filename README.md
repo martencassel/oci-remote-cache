@@ -105,7 +105,7 @@ Key paths:
 - `internal/transport/logger.go`: verbose request/response tracing.
 - `pkg/stream/duplicator.go`: stream duplication helpers.
 
-## Suggested Asciinema Demo
+##
 
 If you record one feature, show this:
 
@@ -156,4 +156,5 @@ Optional final line in the recording:
 
 - This is a learning-oriented project with production-minded constraints.
 - The logging middleware is intentionally verbose for debugging request lifecycles.
-# oci-remote-cache
+
+
