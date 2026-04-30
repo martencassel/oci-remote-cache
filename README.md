@@ -105,18 +105,6 @@ Key paths:
 - `internal/transport/logger.go`: verbose request/response tracing.
 - `pkg/stream/duplicator.go`: stream duplication helpers.
 
-##
-
-If you record one feature, show this:
-
-"Cold miss -> warm hit for the same blob digest"
-
-Why this is the best demo:
-
-- It proves functional correctness quickly.
-- It shows performance value without synthetic benchmarks.
-- It highlights the core engineering promise: digest-safe local reuse.
-
 ### Demo Script (5 minutes)
 
 1. Clean cache directory.
@@ -147,14 +135,3 @@ find /tmp/cache/oci/blobs -type f | head
 podman image rm localhost:8080/docker.io/alpine:latest || true
 podman image pull localhost:8080/docker.io/alpine:latest --tls-verify=false
 ```
-
-Optional final line in the recording:
-
-"First pull paid the network cost, second pull reused verified local blobs."
-
-## Notes
-
-- This is a learning-oriented project with production-minded constraints.
-- The logging middleware is intentionally verbose for debugging request lifecycles.
-
-

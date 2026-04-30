@@ -25,6 +25,10 @@ func LoggHandler() gin.HandlerFunc {
 func main() {
 	repoConfigProvider := config.NewRepoConfigInMemory()
 	repoConfigProvider.AddRepoConfig(&config.RepoConfig{
+		RepoKey:   "jfrog-docker-reg2.bintray.io",
+		RemoteURL: "https://jfrog-docker-reg2.bintray.io",
+	})
+	repoConfigProvider.AddRepoConfig(&config.RepoConfig{
 		RepoKey:   "gcr.io",
 		RemoteURL: "https://gcr.io",
 	})
